@@ -1,0 +1,298 @@
+/*!
+Theme Name: Netflix		
+Theme URI: http://netlix.com.br/
+Author: Hudson
+Author URI: http://hudsoncarolino.com.br/
+Description: Description
+
+--------------------------------------------
+ESTRUTURAÇÃO BASE (HC v1)
+--------------------------------------------
+**** variables
+**** general styles
+**** body
+**** header
+**** footer
+**** home page
+**** extras
+**** @media
+
+font-family: font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+*/
+
+
+/* variables */
+:root{
+	
+}
+
+/* general */
+html, body, main, h1, h2, h3, h4, h5, h6, p, figure,ul,li,a,input{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+}
+
+/*GERAL*/
+.hidden{
+	display: none;
+}
+
+/*BODY*/
+body{
+	padding-top: 63px;
+}
+
+button#mostrarMenu{
+	display: none;
+	position: fixed;
+	z-index: 4;
+	width: 40px;
+	height: 35px;
+	background-color: transparent;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+	outline: none;
+}
+	button#mostrarMenu span{
+		width: 90%;
+		display: block;
+		height: 3px;
+		background-color: #fff;
+		margin: 4px auto;
+		border-radius: 20px;
+		cursor: pointer;
+		transition: .2s;
+		-moz-transform: rotate(0) translate(0);
+		-webkit-transform: rotate(0) translate(0);
+		-o-transform: rotate(0) translate(0);
+		-ms-transform: rotate(0) translate(0);
+		transform: rotate(0) translate(0);
+		transform: rotate(0) translate(0);
+	}
+		button#mostrarMenu.button-open{
+			
+		}
+			button#mostrarMenu.button-open{
+				transition: .2s;
+			}
+				button#mostrarMenu.button-open span{
+					transition: .5s;
+					margin:0;
+					-moz-transform: rotate(0) translate(0);
+					-webkit-transform: rotate(0) translate(0);
+					-o-transform: rotate(0) translate(0);
+					-ms-transform: rotate(0) translate(0);
+					transform: rotate(0) translate(0);
+					transform: rotate(0) translate(0);
+				}
+				button#mostrarMenu.button-open span:nth-child(1){
+				    transition: .5s;
+					-moz-transform: rotate(45deg) translate(2px,2px);
+					-webkit-transform: rotate(45deg) translate(2px,2px);
+					-o-transform: rotate(45deg) translate(2px,2px);
+					-ms-transform: rotate(45deg) translate(2px,2px);
+					transform: rotate(45deg) translate(2px,2px);
+					transform: rotate(45deg) translate(2px,2px);
+				}
+				button#mostrarMenu.button-open span:nth-child(2){
+					transition: .5s;
+					-moz-transform: rotate(-45deg) translateY(0px);
+					-webkit-transform: rotate(-45deg) translateY(0px);
+					-o-transform: rotate(-45deg) translateY(0px);
+					-ms-transform: rotate(-45deg) translateY(0px);
+				    transform: rotate(-45deg) translateY(0px);
+				}
+				button#mostrarMenu.button-open span:nth-child(3){
+					transition: .5s;
+					opacity: 0;
+				}
+header{
+	background-color: #2196F3;
+	position: fixed;
+	width: 100%;
+	top:0;
+	z-index: 3;
+	transition: .5s;
+}
+
+	header ul{
+		display: flex;
+		justify-content: space-evenly;
+		list-style: none;
+	}
+		header ul li{
+		
+		}
+			header ul li a{
+				color: #fff;
+				padding: 20px;
+				display: block;
+				font-size: 20px;
+				text-transform: uppercase;
+				transition: .5s;
+			}
+	header.headerFixed{
+		transition: 1s;
+		background-color: #8BC34A;
+	}
+		header.headerFixed ul li a{
+		    padding: 10px;
+		    transition: 1s;
+		}
+main .banner{
+	width: 100%;
+	height: 400px;
+    background-color: #00BCD4;
+    margin-bottom:100px;
+}
+	main .banner div.owl-item > div{
+		height: 400px;
+		width: 100%;
+		background-color: #03A9F4!important;
+		background-position: center!important;
+		background-size: cover!important;
+	}
+.carrossel{
+	position: relative;
+	overflow: hidden;
+	height: 400px;
+	margin-bottom:100px;
+}
+.buttonCarrossel{
+	position: absolute;
+    top: 0;
+    z-index: 3;
+    right: -100%;
+    height: 100%;
+    background: #000000a3;
+    border: none;
+    color: #fff;
+    padding: 0 22px;
+    transition: .5s;
+    cursor: pointer;
+
+}
+.buttonCarrossel.buttonLeft{
+    left: -100%;
+}
+.carrossel:hover button.buttonRight{
+	opacity: 1;
+	transition: .5s;
+	right:0;
+}
+.carrossel:hover button.buttonLeft{
+	opacity: 1;
+	transition: .5s;
+	left:0;
+}
+
+div.blocos{
+	width: 100%;
+	max-width: 80%;
+	margin:0 auto;
+    overflow: hidden
+}
+
+	div.blocos ul{
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+		div.blocos ul li{
+			width: 30%;
+			height: 200px;
+			background-color: #03A9F4;
+			margin-bottom: 10px;
+			opacity: 0;
+			transition: .1s;
+
+
+		}
+			div.blocos ul li:hover{
+				-webkit-box-shadow: 0px -1px 14px 1px rgba(0,0,0,0.51);
+				-moz-box-shadow: 0px -1px 14px 1px rgba(0,0,0,0.51);
+				box-shadow: 0px -1px 14px 1px rgba(0,0,0,0.51);
+				transition: .1s;
+				
+
+			}
+			div.blocos ul li.transition-left-x{
+				position: relative;
+				left: -29%;
+				transition: 1s;
+			}
+			div.blocos ul li.transition-right-x{
+				position: relative;
+				right: -29%;
+				transition: 1s;
+			}
+			div.blocos ul li.transition-center-x{
+				opacity: 0;
+				transition: 1s;
+				transform: translateY(99%);
+			}
+
+			div.blocos ul li.showLeft{
+				opacity: 1;
+				transition: 1s;
+				left:0;
+			}
+			div.blocos ul li.showRight{
+				opacity: 1;
+				transition: 1s;
+				right:0;
+			}
+			div.blocos ul li.showCenter{
+				opacity: 1;
+				transition: 1s;
+				transform: translateY(0%);
+			}
+div.figure{
+
+}
+	div.figure figure{
+		display: block;
+		width: 100%;
+		height: 500px;
+		background-color:red;
+		margin:200px 0;
+		background-image:url('../img/1.jpg');
+		background-size:cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	div.figure figure.figure2{
+		background-image:url('../img/2.jpg');
+	}
+
+	@media(max-width: 768px ){
+		div.blocos ul li{
+		    width: 49%;
+		}
+
+		header ul {
+			justify-content: initial;
+			list-style: none;
+			height: 100vh;
+			display: none;
+		}
+		header {
+			min-height: 63px;
+		}
+		button#mostrarMenu{
+			display: block;
+		}
+	}
+
+	@media(max-width: 500px ){
+		div.blocos ul li{
+		    width: 100%;
+		}
+	}
